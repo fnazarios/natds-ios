@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name          = 'NatDS'
-  s.version       = "#{ ENV['VERSION_NUMBER'] }"
+  s.version       = "5.2.3"
   s.summary       = 'Natura Group Design System'
   s.description   = <<-DESC
                     Natura Design System helps designers and developers work faster and smarter, ensuring brand consistency and scalability.
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license       = 'ISC'
   s.author        = { 'System Team - Natura SA' => 'systemteamopensource@natura.net' }
 
-  s.source        = { :git => 'https://github.com/natura-cosmeticos/natds-ios.git', :tag => s.version }
+  s.source        = { :git => 'https://github.com/fnazarios/natds-ios.git', :tag => s.version }
   s.source_files  = 'Sources/**/*.{swift,h,m}'
 
   s.resources           = ['Sources/**/*.xcassets']
