@@ -125,16 +125,25 @@ public final class NatCounter: UIView {
     public func configure(label: String?) {
         self.label.text = label
     }
-    
+
     /// Sets the value of NatCounter component
     /// - Parameter value: value selected of NatCounter
     public func setCount(_ value: Int) {
         numCounter = value
         numCounterLabel.text = "\(numCounter)"
+        checkLimit()
     }
-    
+
     public typealias CounterChangeValueHandler = (Int) -> Void
     private var counterChangeValueHandler: CounterChangeValueHandler?
+
+    /// Sets the handler to listening value changes
+    /// - Parameter changeValue: A closure to notify value changes
+    ///
+    /// Example of usage:
+    /// ```
+    /// counter.configure { newValue in }
+    /// ```
     public func configure(changeValue: @escaping CounterChangeValueHandler) {
         self.counterChangeValueHandler = changeValue
     }
